@@ -60,21 +60,24 @@ app.post('/API/add', function(req,res){
 var reservation = req.body;
 
 //if tables.length is equal to or greater than 5, push to waitlist array
-if (tables.length >= 5){
+	if (tables.length >= 5){
 
-waitlist.push(req.body);
+		waitlist.push(req.body);
 
-}else{//if less than 5, push to tables array
+	} else {//if less than 5, push to tables array
 
-	tables.push(req.body);
-}
-console.log(tables);
+		tables.push(req.body);
+
+	}
+	console.log(tables);
+	res.json(reservation);
 });
 
-app.post('/API/clear', function(req,res){
+app.get('/API/clear', function(req,res){
 // clear arrays and reset
 	tables = [];
 	waitlist = [];
+	res.end();
 });
 
 

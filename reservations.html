@@ -54,10 +54,10 @@
 			event.preventDefault();
 
 			var makeReservation = {
-				name: $("#name").val().trim();
-				phone: $("#phone-number").val().trim();
-				email: $("#email").val().trim();
-				unique: $("#unique").val().trim();
+				name: $("#name").val().trim(),
+				phone: $("#phone-number").val().trim(),
+				email: $("#email").val().trim(),
+				unique: $("#unique").val().trim()
 			};
 
 			$.post("/API/add", makeReservation)
