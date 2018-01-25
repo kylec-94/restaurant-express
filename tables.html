@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Restaurant Express</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
@@ -46,11 +46,12 @@
 
 	<script type="text/javascript">
 		$.get("/api/tables", function(data){
+			console.log('get tables',data);
 			for (var i = 0; i < data.length; i++) {
 				var wellSection = $("<div>");
 				wellSection.addClass("well");
 				wellSection.attr("id", "character-well" + i);
-				$("table-section").append(wellSection);
+				$("#table-section").append(wellSection);
 
 				$("#character-well" + i).append("<h2>" + data[i].name + "</h2>");
 				$("#character-well" + i).append("<h3>" + data[i].phone + "</h4>");
@@ -60,16 +61,17 @@
 		});
 
 		$.get("/api/waitlist", function(data){
+			console.log('get wait',data);
 			for (var i = 0; i < data.length; i++) {
 				var wellSection = $("<div>");
 				wellSection.addClass("well");
-				wellSection.attr("id", "character-well" + i);
-				$("waitlist-section").append(wellSection);
+				wellSection.attr("id", "character-well2" + i);
+				$("#waitlist-section").append(wellSection);
 
-				$("#character-well" + i).append("<h2>" + data[i].name + "</h2>");
-				$("#character-well" + i).append("<h3>" + data[i].phone + "</h4>");
-				$("#character-well" + i).append("<h3>" + data[i].email + "</h4>");
-				$("#character-well" + i).append("<h3>" + data[i].unique + "</h4>");
+				$("#character-well2" + i).append("<h2>" + data[i].name + "</h2>");
+				$("#character-well2" + i).append("<h3>" + data[i].phone + "</h4>");
+				$("#character-well2" + i).append("<h3>" + data[i].email + "</h4>");
+				$("#character-well2" + i).append("<h3>" + data[i].unique + "</h4>");
 			}
 		});
 	</script>
