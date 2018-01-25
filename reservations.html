@@ -57,13 +57,13 @@
 				name: $("#name").val().trim();
 				phone: $("#phone-number").val().trim();
 				email: $("#email").val().trim();
-				unique: $("#unique").val().trim;
+				unique: $("#unique").val().trim();
 			};
 
-			$.post("api/waitlist", makeReservation)
-			.then(function(data){
+			$.post("/API/add", makeReservation)
+			.done(function(data){
 				console.log(data);
-				alert("Adding to wait list...");
+				alert("Adding reservation...");
 			});
 		});
 	</script>

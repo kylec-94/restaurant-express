@@ -24,7 +24,7 @@
 					<div class="panel-heading">
 						<h3 class="panel-title"><strong>Current Reservations</strong></h3>
 					</div>
-					<div class="panel-body" id="well-section">
+					<div class="panel-body" id="table-section">
 						
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					<div class="panel-heading">
 						<h3 class="panel-title"><strong>Waiting List</strong></h3>
 					</div>
-					<div class="panel-body" id="well-section">
+					<div class="panel-body" id="waitlist-section">
 						
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 				var wellSection = $("<div>");
 				wellSection.addClass("well");
 				wellSection.attr("id", "character-well" + i);
-				$("well-section").append(wellSection);
+				$("table-section").append(wellSection);
 
 				$("#character-well" + i).append("<h2>" + data[i].name + "</h2>");
 				$("#character-well" + i).append("<h3>" + data[i].phone + "</h4>");
@@ -64,7 +64,7 @@
 				var wellSection = $("<div>");
 				wellSection.addClass("well");
 				wellSection.attr("id", "character-well" + i);
-				$("well-section").append(wellSection);
+				$("waitlist-section").append(wellSection);
 
 				$("#character-well" + i).append("<h2>" + data[i].name + "</h2>");
 				$("#character-well" + i).append("<h3>" + data[i].phone + "</h4>");
