@@ -28,15 +28,15 @@ app.get('/reservations', function(req,res){
 });
 
 app.get('/API/tables', function(req,res){
-
+// display tables reserv and waitlist
 });
 
 app.post('/API/add', function(req,res){
-
+// add to tables array or waitlist array
 });
 
 app.post('/API/clear', function(req,res){
-	
+// clear arrays and reset
 });
 
 
