@@ -27,6 +27,13 @@ app.get('/reservations', function(req,res){
 	res.sendFile(path.join(__dirname, 'reservations.html'));
 });
 
+app.get('/API/tables', function(req,res){
+
+});
+
+app.post('/API/add', function(req,res){
+	
+});
 
 
 //Starts the server to begin listening
