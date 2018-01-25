@@ -61,6 +61,8 @@ app.post('/API/add', function(req,res){
 
 app.post('/API/clear', function(req,res){
 // clear arrays and reset
+	tables = [];
+	waitlist = [];
 });
 
 
