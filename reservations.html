@@ -49,6 +49,25 @@
 		</div>
 	</div>
 
+	<script type="text/javascript">
+		$("#submit-btn").on("click", function(event){
+			event.preventDefault();
+
+			var makeReservation = {
+				name: $("#name").val().trim();
+				phone: $("#phone-number").val().trim();
+				email: $("#email").val().trim();
+				unique: $("#unique").val().trim;
+			};
+
+			$.post("api/waitlist", makeReservation)
+			.then(function(data){
+				console.log(data);
+				alert("Adding to wait list...");
+			});
+		});
+	</script>
+
 	<footer class="footer">
 		<div class="container">
 			<a href="/api/tables">API Table Link</a>
