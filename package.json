@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-express",
+  "version": "1.0.0",
+  "description": "Reservation booking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylec-94/restaurant-express.git"
+  },
+  "author": "Kyle Crane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kylec-94/restaurant-express/issues"
+  },
+  "homepage": "https://github.com/kylec-94/restaurant-express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "http": "0.0.0"
+  }
+}
