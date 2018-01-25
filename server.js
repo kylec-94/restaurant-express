@@ -56,7 +56,19 @@ res.json(waitlist);
 app.post('/API/add', function(req,res){
 // add to tables array or waitlist array
 // using body parser - req.body
+//turn req/body to a usable variable
+var reservation = req.body;
 
+//if tables.length is equal to or greater than 5, push to waitlist array
+if (tables.length >= 5){
+
+waitlist.push(req.body);
+
+}else{//if less than 5, push to tables array
+
+	tables.push(req.body);
+}
+console.log(tables);
 });
 
 app.post('/API/clear', function(req,res){
