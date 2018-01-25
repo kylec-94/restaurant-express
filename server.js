@@ -39,7 +39,7 @@ app.get('/tables', function(req,res) {
 	res.sendFile(path.join(__dirname, 'tables.html'));
 });
 
-app.get('/reservations', function(req,res){
+app.get('/reserve', function(req,res){
 	res.sendFile(path.join(__dirname, 'reservations.html'));
 });
 
