@@ -32,6 +32,10 @@ app.get('/API/tables', function(req,res){
 });
 
 app.post('/API/add', function(req,res){
+
+});
+
+app.post('/API/clear', function(req,res){
 	
 });
 
